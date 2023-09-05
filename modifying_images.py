@@ -62,18 +62,20 @@ for file in filenames:
         default_font = ImageFont.load_default()
         
         # Increase the font size for the default font
-        font_size = 24
+        font_size = 32
         larger_font = ImageFont.truetype("/Users/jeremybenik/Downloads/times-new-roman.ttf", font_size)
         
-        text_color = (255, 255, 255)
-        
+        # text_color = (255, 255, 255)
+        text_color = 'black'
         # Draw date and time
+        text_color = (255, 255, 255)
         draw.text((20, image.height - 30), printed_datetime, font=larger_font, fill=text_color)
         
         # Draw temperature and pressure
+        text_color = 'black'
         Temp_text = f' Temperature: {round(temp[location], 1)}°F'
         Pressure_text = f' Pressure: {round(pres[location], 1)} hPa'
-        draw.text((15, 30), Temp_text, font=larger_font, fill=text_color)
+        draw.text((15, 35), Temp_text, font=larger_font, fill=text_color)
         draw.text((15, 5), Pressure_text, font=larger_font, fill=text_color)
         
         # Draw watermark
